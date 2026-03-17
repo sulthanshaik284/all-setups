@@ -9,4 +9,7 @@ chmod +x kops
 sudo mv kops /usr/local/bin/kops
 
 Kops Cluster Creation Command:
+export KOPS_STATE_STORE=s3://sulthankopsbucket
 kops create cluster --name sulthan.k8s.local --zones us-east-1a,us-east-1b --master-size c7i-flex.large --master-volume-size 30 --node-size t3.micro --node-count 2 --node-volume-size 20 --image=ami-0b6c6ebed2801a5cb
+kops update cluster --name sulthan.k8s.local --yes --admin
+
