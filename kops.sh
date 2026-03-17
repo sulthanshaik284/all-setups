@@ -8,4 +8,5 @@ curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s htt
 chmod +x kops
 sudo mv kops /usr/local/bin/kops
 
-
+Kops Cluster Creation Command:
+kops create cluster --name sulthan.k8s.local --zones us-east-1a,us-east-1b --master-size c7i-flex.large --master-volume-size 30 --node-size t3.micro --node-count 2 --node-volume-size 20 --image=ami-0b6c6ebed2801a5cb
